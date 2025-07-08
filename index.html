@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suez Canal CS GPA Helper</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Suez Canal CS GPA Helper</h1>
+    <form id="gpa-form">
+      <label for="branch">Select Branch:</label>
+      <select id="branch" name="branch">
+        <option value="General">General</option>
+        <option value="Software Engineering">Software Engineering</option>
+      </select>
+      <br><br>
+      <label for="student-json">Paste your student JSON data:</label><br>
+      <textarea id="student-json" name="student-json" rows="10" cols="60" placeholder="Paste JSON here..."></textarea>
+      <br><br>
+      <button type="submit">Calculate GPA</button>
+    </form>
+    <div id="results"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html> 

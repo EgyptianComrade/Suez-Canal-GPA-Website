@@ -1,0 +1,1408 @@
+{
+    "General": {
+        "BSD101": {
+            "name": "Calculus",
+            "credit_hours": 3,
+            "prerequisites": [],
+            "level": "First Level",
+            "semester": "1st Semester",
+            "track": "General",
+            "type": "General"
+        },
+        "BSD103": {
+            "name": "Discrete Mathematics",
+            "credit_hours": 3,
+            "prerequisites": [],
+            "level": "First Level",
+            "semester": "1st Semester",
+            "track": "General",
+            "type": "General"
+        },
+        "CSD102": {
+            "name": "Basics of Computer Science",
+            "credit_hours": 3,
+            "prerequisites": [],
+            "level": "First Level",
+            "semester": "1st Semester",
+            "track": "General",
+            "type": "General"
+        },
+        "ISD101": {
+            "name": "Fundamentals of Information Systems",
+            "credit_hours": 3,
+            "prerequisites": [],
+            "level": "First Level",
+            "semester": "1st Semester",
+            "track": "General",
+            "type": "General"
+        },
+        "ISD102": {
+            "name": "Introduction to Database Systems",
+            "credit_hours": 3,
+            "prerequisites": [],
+            "level": "First Level",
+            "semester": "1st Semester",
+            "track": "General",
+            "type": "General"
+        },
+        "BSD104": {
+            "name": "Linear Algebra",
+            "credit_hours": 3,
+            "prerequisites": [],
+            "level": "First Level",
+            "semester": "2nd Semester",
+            "track": "General",
+            "type": "General"
+        },
+        "BSD105": {
+            "name": "Statistics and Probabilities",
+            "credit_hours": 3,
+            "prerequisites": [
+                "BSD101"
+            ],
+            "level": "First Level",
+            "semester": "2nd Semester",
+            "track": "General",
+            "type": "General"
+        },
+        "BSD226": {
+            "name": "Technical Writing",
+            "credit_hours": 2,
+            "prerequisites": [],
+            "level": "First Level",
+            "semester": "2nd Semester",
+            "track": "General",
+            "type": "General"
+        },
+        "CSD101": {
+            "name": "Digital Logic Design",
+            "credit_hours": 3,
+            "prerequisites": [],
+            "level": "First Level",
+            "semester": "2nd Semester",
+            "track": "General",
+            "type": "General"
+        },
+        "CSD106": {
+            "name": "Fundamentals of Programming",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD102"
+            ],
+            "level": "First Level",
+            "semester": "2nd Semester",
+            "track": "General",
+            "type": "General"
+        },
+        "ISD104": {
+            "name": "System Analysis and Design",
+            "credit_hours": 3,
+            "prerequisites": [
+                "ISD102"
+            ],
+            "level": "First Level",
+            "semester": "2nd Semester",
+            "track": "General",
+            "type": "General"
+        },
+        "BSD220": {
+            "name": "Stochastic Process",
+            "credit_hours": 3,
+            "prerequisites": [
+                "BSD105"
+            ],
+            "level": "Second Level",
+            "semester": "1st Semester",
+            "track": "General",
+            "type": "General"
+        },
+        "BSD222": {
+            "name": "Operations Research",
+            "credit_hours": 3,
+            "prerequisites": [
+                "BSD101",
+                "BSD104"
+            ],
+            "level": "Second Level",
+            "semester": "1st Semester",
+            "track": "General",
+            "type": "General"
+        },
+        "CSD221": {
+            "name": "Data Structures",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD106"
+            ],
+            "level": "Second Level",
+            "semester": "1st Semester",
+            "track": "General",
+            "type": "General"
+        },
+        "CSD223": {
+            "name": "Object-Oriented Programming",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD106"
+            ],
+            "level": "Second Level",
+            "semester": "1st Semester",
+            "track": "General",
+            "type": "General"
+        },
+        "ISD224": {
+            "name": "Web Pages Programming",
+            "credit_hours": 3,
+            "prerequisites": [],
+            "level": "Second Level",
+            "semester": "1st Semester",
+            "track": "General",
+            "type": "General"
+        },
+        "BSD227": {
+            "name": "Ordinary Differential Equations",
+            "credit_hours": 3,
+            "prerequisites": [
+                "BSD101"
+            ],
+            "level": "Second Level",
+            "semester": "2nd Semester",
+            "track": "General",
+            "type": "General"
+        },
+        "BSD228": {
+            "name": "Advanced Math",
+            "credit_hours": 3,
+            "prerequisites": [
+                "BSD101"
+            ],
+            "level": "Second Level",
+            "semester": "2nd Semester",
+            "track": "General",
+            "type": "General"
+        },
+        "BSD232": {
+            "name": "Physics",
+            "credit_hours": 2,
+            "prerequisites": [
+                "CSD101"
+            ],
+            "level": "Second Level",
+            "semester": "2nd Semester",
+            "track": "General",
+            "type": "General"
+        },
+        "CSD230": {
+            "name": "Analysis of Algorithms",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD221"
+            ],
+            "level": "Second Level",
+            "semester": "2nd Semester",
+            "track": "General",
+            "type": "General"
+        },
+        "ISD229": {
+            "name": "Electronic Business",
+            "credit_hours": 3,
+            "prerequisites": [],
+            "level": "Second Level",
+            "semester": "2nd Semester",
+            "track": "General",
+            "type": "General"
+        },
+        "ISD225": {
+            "name": "Information Theory",
+            "credit_hours": 3,
+            "prerequisites": [],
+            "level": "Second Level",
+            "semester": "2nd Semester",
+            "track": "General",
+            "type": "Elective"
+        },
+        "CSD231": {
+            "name": "Concepts of Programming Languages",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD106"
+            ],
+            "level": "Second Level",
+            "semester": "2nd Semester",
+            "track": "General",
+            "type": "Elective"
+        },
+        "ISD232": {
+            "name": "Web Technology",
+            "credit_hours": 3,
+            "prerequisites": [
+                "ISD224"
+            ],
+            "level": "Second Level",
+            "semester": "2nd Semester",
+            "track": "General",
+            "type": "Elective"
+        },
+        "BSD233": {
+            "name": "Numerical Analysis",
+            "credit_hours": 3,
+            "prerequisites": [
+                "BSD101"
+            ],
+            "level": "Second Level",
+            "semester": "2nd Semester",
+            "track": "General",
+            "type": "Elective"
+        },
+        "BSD229": {
+            "name": "Advanced Math-2",
+            "credit_hours": 3,
+            "prerequisites": [
+                "BSD228"
+            ],
+            "level": "Second Level",
+            "semester": "2nd Semester",
+            "track": "General",
+            "type": "Elective"
+        },
+        "BSD234": {
+            "name": "Partial Differential Equations",
+            "credit_hours": 3,
+            "prerequisites": [
+                "BSD101"
+            ],
+            "level": "Second Level",
+            "semester": "2nd Semester",
+            "track": "General",
+            "type": "Elective"
+        },
+        "CSD331": {
+            "name": "Artificial Intelligence",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD230"
+            ],
+            "level": "Third Level",
+            "semester": "2nd Semester",
+            "track": "Information Systems",
+            "type": "General"
+        },
+        "CSD332": {
+            "name": "Computer Architecture",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD101"
+            ],
+            "level": "Third Level",
+            "semester": "1st Semester",
+            "track": "Computer Science",
+            "type": "General"
+        },
+        "CSD333": {
+            "name": "Operating Systems",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD230"
+            ],
+            "level": "Third Level",
+            "semester": "1st Semester",
+            "track": "Computer Science",
+            "type": "General"
+        },
+        "CSD334": {
+            "name": "Digital Image Processing",
+            "credit_hours": 3,
+            "prerequisites": [
+                "BSD104",
+                "CSD230"
+            ],
+            "level": "Third Level",
+            "semester": "2nd Semester",
+            "track": "Information Systems",
+            "type": "Elective"
+        },
+        "CSD335": {
+            "name": "Assembly Language",
+            "credit_hours": 2,
+            "prerequisites": [
+                "CSD101"
+            ],
+            "level": "Third Level",
+            "semester": "1st Semester",
+            "track": "Computer Science",
+            "type": "General"
+        },
+        "CSD336": {
+            "name": "Theory and Design of Compilers",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD231"
+            ],
+            "level": "Third Level",
+            "semester": "2nd Semester",
+            "track": "Computer Science",
+            "type": "General"
+        },
+        "CSD337": {
+            "name": "Computer Graphics",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD230"
+            ],
+            "level": "Third Level",
+            "semester": "2nd Semester",
+            "track": "Computer Science",
+            "type": "General"
+        },
+        "CSD338": {
+            "name": "Introduction to Computer Networks",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD332"
+            ],
+            "level": "Third Level",
+            "semester": "2nd Semester",
+            "track": "Computer Science",
+            "type": "General"
+        },
+        "CSD341": {
+            "name": "Software Engineering",
+            "credit_hours": 3,
+            "prerequisites": [
+                "ISD104"
+            ],
+            "level": "Third Level",
+            "semester": "2nd Semester",
+            "track": "Information Systems",
+            "type": "General"
+        },
+        "CSD340": {
+            "name": "Simulation and Modeling",
+            "credit_hours": 3,
+            "prerequisites": [
+                "BSD105"
+            ],
+            "level": "Third Level",
+            "semester": "2nd Semester",
+            "track": "Computer Science",
+            "type": "General"
+        },
+        "CSD342": {
+            "name": "Advanced Programming Languages",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD223"
+            ],
+            "level": "Third Level",
+            "semester": "2nd Semester",
+            "track": "Information Systems",
+            "type": "Elective"
+        },
+        "ISD303": {
+            "name": "Information Visualization",
+            "credit_hours": 3,
+            "prerequisites": [
+                "ISD101"
+            ],
+            "level": "Third Level",
+            "semester": "2nd Semester",
+            "track": "Information Systems",
+            "type": "Elective"
+        },
+        "CSD343": {
+            "name": "Digital Signal Processing",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD230"
+            ],
+            "level": "Third Level",
+            "semester": "2nd Semester",
+            "track": "Computer Science",
+            "type": "Elective"
+        },
+        "CSD344": {
+            "name": "Logic Programming",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD335"
+            ],
+            "level": "Third Level",
+            "semester": "2nd Semester",
+            "track": "Computer Science",
+            "type": "Elective"
+        },
+        "ISD352": {
+            "name": "Knowledge Representation & Reasoning",
+            "credit_hours": 3,
+            "prerequisites": [],
+            "level": "Third Level",
+            "semester": "2nd Semester",
+            "track": "Information Systems",
+            "type": "Elective"
+        },
+        "CSD339": {
+            "name": "Mobile Computing",
+            "credit_hours": 3,
+            "prerequisites": [],
+            "level": "Third Level",
+            "semester": "1st Semester",
+            "track": "Information Systems",
+            "type": "General"
+        },
+        "CSD345": {
+            "name": "Computer Arabization",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD106"
+            ],
+            "level": "Third Level",
+            "semester": "2nd Semester",
+            "track": "Computer Science",
+            "type": "Elective"
+        },
+        "ISD335": {
+            "name": "Security and Cryptography",
+            "credit_hours": 3,
+            "prerequisites": [],
+            "level": "Third Level",
+            "semester": "2nd Semester",
+            "track": "Computer Science",
+            "type": "Elective"
+        },
+        "CSD346": {
+            "name": "Human Computer Interaction",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD106"
+            ],
+            "level": "Third Level",
+            "semester": "2nd Semester",
+            "track": "Computer Science",
+            "type": "Elective"
+        },
+        "ISD347": {
+            "name": "Computer Network Management",
+            "credit_hours": 3,
+            "prerequisites": [
+                "ISD104"
+            ],
+            "level": "Third Level",
+            "semester": "1st Semester",
+            "track": "Information Systems",
+            "type": "General"
+        },
+        "ISD331": {
+            "name": "Information Retrieval Systems",
+            "credit_hours": 3,
+            "prerequisites": [
+                "ISD104"
+            ],
+            "level": "Third Level",
+            "semester": "1st Semester",
+            "track": "Information Systems",
+            "type": "General"
+        },
+        "ISD333": {
+            "name": "Decision Support Systems",
+            "credit_hours": 3,
+            "prerequisites": [
+                "ISD104"
+            ],
+            "level": "Third Level",
+            "semester": "1st Semester",
+            "track": "Information Systems",
+            "type": "General"
+        },
+        "ISD338": {
+            "name": "Big Data Analysis",
+            "credit_hours": 3,
+            "prerequisites": [
+                "ISD104"
+            ],
+            "level": "Fourth Level",
+            "semester": "2nd Semester",
+            "track": "Computer Science",
+            "type": "Elective"
+        },
+        "ISD336": {
+            "name": "Advanced Database Systems",
+            "credit_hours": 3,
+            "prerequisites": [
+                "ISD102"
+            ],
+            "level": "Third Level",
+            "semester": "2nd Semester",
+            "track": "Information Systems",
+            "type": "General"
+        },
+        "ISD337": {
+            "name": "Information Security",
+            "credit_hours": 3,
+            "prerequisites": [],
+            "level": "Third Level",
+            "semester": "2nd Semester",
+            "track": "Information Systems",
+            "type": "General"
+        },
+        "ISD365": {
+            "name": "Electronic Government",
+            "credit_hours": 2,
+            "prerequisites": [],
+            "level": "Third Level",
+            "semester": "2nd Semester",
+            "track": "Information Systems",
+            "type": "General"
+        },
+        "ISD334": {
+            "name": "Management Information Systems",
+            "credit_hours": 3,
+            "prerequisites": [
+                "ISD101"
+            ],
+            "level": "Third Level",
+            "semester": "2nd Semester",
+            "track": "Information Systems",
+            "type": "Elective"
+        },
+        "CSD441": {
+            "name": "Mobile Communication Systems",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD338"
+            ],
+            "level": "Fourth Level",
+            "semester": "1st Semester",
+            "track": "Computer Science",
+            "type": "General"
+        },
+        "CSD444": {
+            "name": "Distributed Systems",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD333"
+            ],
+            "level": "Fourth Level",
+            "semester": "1st Semester",
+            "track": "Computer Science",
+            "type": "General"
+        },
+        "CSD443": {
+            "name": "Computer Vision Systems",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD334"
+            ],
+            "level": "Fourth Level",
+            "semester": "1st Semester",
+            "track": "Computer Science",
+            "type": "General"
+        },
+        "CSD449": {
+            "name": "Graduation Project",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD449 (1st Sem)"
+            ],
+            "level": "Fourth Level",
+            "semester": "2nd Semester",
+            "track": "Computer Science",
+            "type": "General"
+        },
+        "CSD451": {
+            "name": "Computer and Network Security",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD332"
+            ],
+            "level": "Fourth Level",
+            "semester": "2nd Semester",
+            "track": "Computer Science",
+            "type": "General"
+        },
+        "CSD447": {
+            "name": "Cloud Computing",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD444"
+            ],
+            "level": "Fourth Level",
+            "semester": "2nd Semester",
+            "track": "Computer Science",
+            "type": "General"
+        },
+        "CSD442": {
+            "name": "Neural Networks and Deep Learning",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD331"
+            ],
+            "level": "Fourth Level",
+            "semester": "2nd Semester",
+            "track": "Computer Science",
+            "type": "General"
+        },
+        "CSD452": {
+            "name": "Dynamic Languages",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD106"
+            ],
+            "level": "Fourth Level",
+            "semester": "2nd Semester",
+            "track": "Computer Science",
+            "type": "Elective"
+        },
+        "ISD471": {
+            "name": "Data Mining",
+            "credit_hours": 3,
+            "prerequisites": [
+                "ISD102"
+            ],
+            "level": "Fourth Level",
+            "semester": "1st Semester",
+            "track": "Information Systems",
+            "type": "General"
+        },
+        "CSD453": {
+            "name": "Introduction to Quantum Computing",
+            "credit_hours": 3,
+            "prerequisites": [
+                "BSD228"
+            ],
+            "level": "Fourth Level",
+            "semester": "2nd Semester",
+            "track": "Computer Science",
+            "type": "Elective"
+        },
+        "CSD458": {
+            "name": "Cyber Security",
+            "credit_hours": 3,
+            "prerequisites": [
+                "ISD337"
+            ],
+            "level": "Fourth Level",
+            "semester": "2nd Semester",
+            "track": "Information Systems",
+            "type": "General"
+        },
+        "ISD441": {
+            "name": "Bioinformatics",
+            "credit_hours": 3,
+            "prerequisites": [
+                "ISD102"
+            ],
+            "level": "Fourth Level",
+            "semester": "1st Semester",
+            "track": "Information Systems",
+            "type": "General"
+        },
+        "CSD446": {
+            "name": "Optimization Systems",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD331"
+            ],
+            "level": "Fourth Level",
+            "semester": "2nd Semester",
+            "track": "Information Systems",
+            "type": "Elective"
+        },
+        "CSD448": {
+            "name": "Parallel Processing",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD333"
+            ],
+            "level": "Fourth Level",
+            "semester": "2nd Semester",
+            "track": "Computer Science",
+            "type": "Elective"
+        },
+        "CSD445": {
+            "name": "Introduction to Machine Learning",
+            "credit_hours": 3,
+            "prerequisites": [
+                "CSD331"
+            ],
+            "level": "Fourth Level",
+            "semester": "2nd Semester",
+            "track": "Information Systems",
+            "type": "General"
+        },
+        "ISD444": {
+            "name": "Medical Information Systems",
+            "credit_hours": 3,
+            "prerequisites": [
+                "ISD101"
+            ],
+            "level": "Fourth Level",
+            "semester": "1st Semester",
+            "track": "Information Systems",
+            "type": "General"
+        },
+        "ISD446": {
+            "name": "Graduation Project",
+            "credit_hours": 3,
+            "prerequisites": [
+                "ISD446 (1st Sem)"
+            ],
+            "level": "Fourth Level",
+            "semester": "2nd Semester",
+            "track": "Information Systems",
+            "type": "General"
+        },
+        "ISD445": {
+            "name": "Geographical Information Systems",
+            "credit_hours": 3,
+            "prerequisites": [
+                "ISD334"
+            ],
+            "level": "Fourth Level",
+            "semester": "2nd Semester",
+            "track": "Information Systems",
+            "type": "General"
+        },
+        "ISD451": {
+            "name": "XML Databases",
+            "credit_hours": 3,
+            "prerequisites": [
+                "ISD102"
+            ],
+            "level": "Fourth Level",
+            "semester": "2nd Semester",
+            "track": "Information Systems",
+            "type": "Elective"
+        },
+        "ISD453": {
+            "name": "Web Information Systems",
+            "credit_hours": 3,
+            "prerequisites": [],
+            "level": "Fourth Level",
+            "semester": "2nd Semester",
+            "track": "Information Systems",
+            "type": "Elective"
+        },
+        "ISD456": {
+            "name": "Quantum Information",
+            "credit_hours": 3,
+            "prerequisites": [
+                "BSD228"
+            ],
+            "level": "Fourth Level",
+            "semester": "2nd Semester",
+            "track": "Information Systems",
+            "type": "Elective"
+        },
+        "ISD455": {
+            "name": "Electronic Health",
+            "credit_hours": 3,
+            "prerequisites": [],
+            "level": "Fourth Level",
+            "semester": "2nd Semester",
+            "track": "Information Systems",
+            "type": "Elective"
+        },
+        "ISD452": {
+            "name": "Electronic Commerce",
+            "credit_hours": 3,
+            "prerequisites": [],
+            "level": "Fourth Level",
+            "semester": "2nd Semester",
+            "track": "Information Systems",
+            "type": "Elective"
+        },
+        "ISD454": {
+            "name": "Cloud Computing Applications",
+            "credit_hours": 3,
+            "prerequisites": [
+                "ISD332"
+            ],
+            "level": "Fourth Level",
+            "semester": "2nd Semester",
+            "track": "Information Systems",
+            "type": "Elective"
+        }
+    },
+    "SoftwareEngineering": {
+        
+            "curriculum": {
+              "First Level": {
+                "1st Semester": [
+                  {
+                    "name": "University English",
+                    "code": "UNI101",
+                    "prerequisites": [],
+                    "type": "general",
+                    "level": "First Level",
+                    "semester": "1st Semester"
+                  },
+                  {
+                    "name": "Introduction to Quality and Anti-corruption",
+                    "code": "UNI102",
+                    "prerequisites": [],
+                    "type": "general",
+                    "level": "First Level",
+                    "semester": "1st Semester"
+                  },
+                  {
+                    "name": "Discrete Mathematics",
+                    "code": "MAT101",
+                    "prerequisites": [],
+                    "type": "general",
+                    "level": "First Level",
+                    "semester": "1st Semester"
+                  },
+                  {
+                    "name": "Statistics and Probability",
+                    "code": "MAT102",
+                    "prerequisites": [],
+                    "type": "general",
+                    "level": "First Level",
+                    "semester": "1st Semester"
+                  },
+                  {
+                    "name": "Introduction to Computer Science",
+                    "code": "CSC101",
+                    "prerequisites": [],
+                    "type": "general",
+                    "level": "First Level",
+                    "semester": "1st Semester"
+                  },
+                  {
+                    "name": "Digital Circuit",
+                    "code": "CSC102",
+                    "prerequisites": [],
+                    "type": "general",
+                    "level": "First Level",
+                    "semester": "1st Semester"
+                  },
+                  {
+                    "name": "Introduction to Information systems",
+                    "code": "ISC101",
+                    "prerequisites": [],
+                    "type": "general",
+                    "level": "First Level",
+                    "semester": "1st Semester"
+                  }
+                ],
+                "2nd Semester": [
+                  {
+                    "name": "Computer Science",
+                    "code": "UNI103",
+                    "prerequisites": [],
+                    "type": "general",
+                    "level": "First Level",
+                    "semester": "2nd Semester"
+                  },
+                  {
+                    "name": "Human Rights",
+                    "code": "UNI104",
+                    "prerequisites": [],
+                    "type": "general",
+                    "level": "First Level",
+                    "semester": "2nd Semester"
+                  },
+                  {
+                    "name": "Linear Algebra",
+                    "code": "MAT103",
+                    "prerequisites": [],
+                    "type": "general",
+                    "level": "First Level",
+                    "semester": "2nd Semester"
+                  },
+                  {
+                    "name": "Programming Principles",
+                    "code": "CSC103",
+                    "prerequisites": [],
+                    "type": "general",
+                    "level": "First Level",
+                    "semester": "2nd Semester"
+                  },
+                  {
+                    "name": "Multimedia",
+                    "code": "ISC102",
+                    "prerequisites": [],
+                    "type": "general",
+                    "level": "First Level",
+                    "semester": "2nd Semester"
+                  },
+                  {
+                    "name": "Technical Writing",
+                    "code": "GEN101",
+                    "prerequisites": [],
+                    "type": "general",
+                    "level": "First Level",
+                    "semester": "2nd Semester"
+                  },
+                  {
+                    "name": "Systems Analysis & Design",
+                    "code": "ISC201",
+                    "prerequisites": [],
+                    "type": "general",
+                    "level": "First Level",
+                    "semester": "2nd Semester"
+                  },
+                  {
+                    "name": "Computer Organization and Architecture",
+                    "code": "CSC202",
+                    "prerequisites": [],
+                    "type": "general",
+                    "level": "First Level",
+                    "semester": "2nd Semester"
+                  }
+                ]
+              },
+              "Second Level": {
+                "1st Semester": [
+                  {
+                    "name": "Software Engineering I",
+                    "code": "SEN201",
+                    "prerequisites": ["CSC103"],
+                    "type": "general",
+                    "level": "Second Level",
+                    "semester": "1st Semester"
+                  },
+                  {
+                    "name": "Object Oriented Programming",
+                    "code": "CSC201",
+                    "prerequisites": ["CSC103"],
+                    "type": "general",
+                    "level": "Second Level",
+                    "semester": "1st Semester"
+                  },
+                  {
+                    "name": "Web Design and Development",
+                    "code": "CSC203",
+                    "prerequisites": ["CSC103"],
+                    "type": "general",
+                    "level": "Second Level",
+                    "semester": "1st Semester"
+                  },
+                  {
+                    "name": "Data Structures",
+                    "code": "CSC207",
+                    "prerequisites": ["CSC103"],
+                    "type": "general",
+                    "level": "Second Level",
+                    "semester": "1st Semester"
+                  },
+                  {
+                    "name": "Database Systems",
+                    "code": "ISC202",
+                    "prerequisites": ["CSC101"],
+                    "type": "general",
+                    "level": "Second Level",
+                    "semester": "1st Semester"
+                  },
+                  {
+                    "name": "Computer Networks",
+                    "code": "CSC205",
+                    "prerequisites": ["CSC202"],
+                    "type": "general",
+                    "level": "Second Level",
+                    "semester": "1st Semester"
+                  }
+                ],
+                "2nd Semester": [
+                  {
+                    "name": "Software Engineering II",
+                    "code": "SEN202",
+                    "prerequisites": ["SEN101"],
+                    "type": "general",
+                    "level": "Second Level",
+                    "semester": "2nd Semester"
+                  },
+                  {
+                    "name": "Software Project Management",
+                    "code": "SEN203",
+                    "prerequisites": ["SEN101"],
+                    "type": "general",
+                    "level": "Second Level",
+                    "semester": "2nd Semester"
+                  },
+                  {
+                    "name": "Algorithms Analysis and Design",
+                    "code": "CSC204",
+                    "prerequisites": ["CSC201"],
+                    "type": "general",
+                    "level": "Second Level",
+                    "semester": "2nd Semester"
+                  },
+                  {
+                    "name": "Compiler Design",
+                    "code": "CSC206",
+                    "prerequisites": ["CSC202"],
+                    "type": "general",
+                    "level": "Second Level",
+                    "semester": "2nd Semester"
+                  },
+                  {
+                    "name": "Advanced Programming and Dynamic Languages",
+                    "code": "CSC401",
+                    "prerequisites": ["CSC203"],
+                    "type": "general",
+                    "level": "Second Level",
+                    "semester": "2nd Semester"
+                  },
+                  {
+                    "name": "Operating System",
+                    "code": "CSC303",
+                    "prerequisites": ["CSC202"],
+                    "type": "general",
+                    "level": "Second Level",
+                    "semester": "2nd Semester"
+                  }
+                ]
+              },
+              "Third Level": {
+                "1st Semester": [
+                  {
+                    "name": "Software Process Engineering",
+                    "code": "SEN301",
+                    "prerequisites": ["SEN202"],
+                    "type": "general",
+                    "level": "Third Level",
+                    "semester": "1st Semester"
+                  },
+                  {
+                    "name": "Artificial Intelligence",
+                    "code": "CSC301",
+                    "prerequisites": ["CSC204"],
+                    "type": "general",
+                    "level": "Third Level",
+                    "semester": "1st Semester"
+                  },
+                  {
+                    "name": "Security and Cryptography",
+                    "code": "CSC302",
+                    "prerequisites": ["CSC204"],
+                    "type": "general",
+                    "level": "Third Level",
+                    "semester": "1st Semester"
+                  },
+                  {
+                    "name": "Mobile Application Development",
+                    "code": "CSC402",
+                    "prerequisites": ["CSC203"],
+                    "type": "general",
+                    "level": "Third Level",
+                    "semester": "1st Semester"
+                  },
+                  {
+                    "name": "Minor Elective",
+                    "code": "CSC3xx",
+                    "prerequisites": [],
+                    "type": "elective",
+                    "level": "Third Level",
+                    "semester": "1st Semester"
+                  },
+                  {
+                    "name": "Major Elective",
+                    "code": "SEN3xx",
+                    "prerequisites": [],
+                    "type": "elective",
+                    "level": "Third Level",
+                    "semester": "1st Semester"
+                  }
+                ],
+                "2nd Semester": [
+                  {
+                    "name": "Software Requirements Engineering",
+                    "code": "SEN302",
+                    "prerequisites": ["SEN202"],
+                    "type": "general",
+                    "level": "Third Level",
+                    "semester": "2nd Semester"
+                  },
+                  {
+                    "name": "Human Computer Interaction",
+                    "code": "SEN303",
+                    "prerequisites": ["SEN202"],
+                    "type": "general",
+                    "level": "Third Level",
+                    "semester": "2nd Semester"
+                  },
+                  {
+                    "name": "Parallel Programming",
+                    "code": "CSC304",
+                    "prerequisites": ["CSC205"],
+                    "type": "general",
+                    "level": "Third Level",
+                    "semester": "2nd Semester"
+                  },
+                  {
+                    "name": "Simulation and Modelling",
+                    "code": "CSC305",
+                    "prerequisites": ["CSC207"],
+                    "type": "general",
+                    "level": "Third Level",
+                    "semester": "2nd Semester"
+                  },
+                  {
+                    "name": "Minor Elective",
+                    "code": "CSC3xx",
+                    "prerequisites": [],
+                    "type": "elective",
+                    "level": "Third Level",
+                    "semester": "2nd Semester"
+                  },
+                  {
+                    "name": "Major Elective",
+                    "code": "SEN3xx",
+                    "prerequisites": [],
+                    "type": "elective",
+                    "level": "Third Level",
+                    "semester": "2nd Semester"
+                  }
+                ],
+                "Third Level Minor Electives": [
+                  {
+                    "name": "Microprocessors and Assembly language",
+                    "code": "CSC306",
+                    "prerequisites": [],
+                    "type": "elective",
+                    "level": "Third Level",
+                    "semester": "Elective"
+                  },
+                  {
+                    "name": "Theory of Computation",
+                    "code": "CSC307",
+                    "prerequisites": [],
+                    "type": "elective",
+                    "level": "Third Level",
+                    "semester": "Elective"
+                  },
+                  {
+                    "name": "Embedded Systems",
+                    "code": "CSC308",
+                    "prerequisites": [],
+                    "type": "elective",
+                    "level": "Third Level",
+                    "semester": "Elective"
+                  },
+                  {
+                    "name": "Computer Graphics",
+                    "code": "CSC309",
+                    "prerequisites": [],
+                    "type": "elective",
+                    "level": "Third Level",
+                    "semester": "Elective"
+                  },
+                  {
+                    "name": "Advanced Database",
+                    "code": "CSC310",
+                    "prerequisites": [],
+                    "type": "elective",
+                    "level": "Third Level",
+                    "semester": "Elective"
+                  }
+                ],
+                "Third Level Major Electives": [
+                  {
+                    "name": "Software Verification and validation",
+                    "code": "SEN304",
+                    "prerequisites": [],
+                    "type": "elective",
+                    "level": "Third Level",
+                    "semester": "Elective"
+                  },
+                  {
+                    "name": "Software Quality Assurance",
+                    "code": "SEN305",
+                    "prerequisites": [],
+                    "type": "elective",
+                    "level": "Third Level",
+                    "semester": "Elective"
+                  },
+                  {
+                    "name": "Object-oriented software engineering",
+                    "code": "SEN306",
+                    "prerequisites": [],
+                    "type": "elective",
+                    "level": "Third Level",
+                    "semester": "Elective"
+                  },
+                  {
+                    "name": "Software Design and Development",
+                    "code": "SEN307",
+                    "prerequisites": [],
+                    "type": "elective",
+                    "level": "Third Level",
+                    "semester": "Elective"
+                  }
+                ]
+              },
+              "Fourth Level": {
+                "1st Semester": [
+                  {
+                    "name": "Software Architecture Engineering",
+                    "code": "SEN401",
+                    "prerequisites": ["SEN202"],
+                    "type": "general",
+                    "level": "Fourth Level",
+                    "semester": "1st Semester"
+                  },
+                  {
+                    "name": "Project I",
+                    "code": "SEN409",
+                    "prerequisites": [],
+                    "type": "general",
+                    "level": "Fourth Level",
+                    "semester": "1st Semester"
+                  },
+                  {
+                    "name": "Minor Elective",
+                    "code": "CSC4xx",
+                    "prerequisites": [],
+                    "type": "elective",
+                    "level": "Fourth Level",
+                    "semester": "1st Semester"
+                  },
+                  {
+                    "name": "Major Elective",
+                    "code": "SEN4xx",
+                    "prerequisites": [],
+                    "type": "elective",
+                    "level": "Fourth Level",
+                    "semester": "1st Semester"
+                  }
+                ],
+                "2nd Semester": [
+                  {
+                    "name": "Software Component and Design Patterns",
+                    "code": "SEN402",
+                    "prerequisites": ["SEN401"],
+                    "type": "general",
+                    "level": "Fourth Level",
+                    "semester": "2nd Semester"
+                  },
+                  {
+                    "name": "Project II",
+                    "code": "SEN410",
+                    "prerequisites": [],
+                    "type": "general",
+                    "level": "Fourth Level",
+                    "semester": "2nd Semester"
+                  },
+                  {
+                    "name": "Minor Elective",
+                    "code": "CSC4xx",
+                    "prerequisites": [],
+                    "type": "elective",
+                    "level": "Fourth Level",
+                    "semester": "2nd Semester"
+                  },
+                  {
+                    "name": "Major Elective",
+                    "code": "SEN4xx",
+                    "prerequisites": [],
+                    "type": "elective",
+                    "level": "Fourth Level",
+                    "semester": "2nd Semester"
+                  }
+                ],
+                "Fourth Level Minor Electives": [
+                  {
+                    "name": "Optimization Techniques",
+                    "code": "CSC403",
+                    "prerequisites": ["CSC301"],
+                    "type": "elective",
+                    "level": "Fourth Level",
+                    "semester": "Elective"
+                  },
+                  {
+                    "name": "Distributed systems",
+                    "code": "CSC404",
+                    "prerequisites": ["CSC303"],
+                    "type": "elective",
+                    "level": "Fourth Level",
+                    "semester": "Elective"
+                  },
+                  {
+                    "name": "Machine Learning",
+                    "code": "CSC405",
+                    "prerequisites": ["CSC301"],
+                    "type": "elective",
+                    "level": "Fourth Level",
+                    "semester": "Elective"
+                  },
+                  {
+                    "name": "Big Data and cloud computing",
+                    "code": "CSC406",
+                    "prerequisites": ["CSC303"],
+                    "type": "elective",
+                    "level": "Fourth Level",
+                    "semester": "Elective"
+                  },
+                  {
+                    "name": "Soft Computing",
+                    "code": "CSC407",
+                    "prerequisites": ["CSC301"],
+                    "type": "elective",
+                    "level": "Fourth Level",
+                    "semester": "Elective"
+                  },
+                  {
+                    "name": "Image Processing",
+                    "code": "CSC408",
+                    "prerequisites": ["CSC101"],
+                    "type": "elective",
+                    "level": "Fourth Level",
+                    "semester": "Elective"
+                  }
+                ],
+                "Fourth Level Major Electives": [
+                  {
+                    "name": "Software Agents Concepts and Design",
+                    "code": "SEN403",
+                    "prerequisites": ["SEN202"],
+                    "type": "elective",
+                    "level": "Fourth Level",
+                    "semester": "Elective"
+                  },
+                  {
+                    "name": "Service Oriented Computing",
+                    "code": "SEN404",
+                    "prerequisites": ["SEN202"],
+                    "type": "elective",
+                    "level": "Fourth Level",
+                    "semester": "Elective"
+                  },
+                  {
+                    "name": "Formal Methods in Software Engineering",
+                    "code": "SEN405",
+                    "prerequisites": ["SEN202"],
+                    "type": "elective",
+                    "level": "Fourth Level",
+                    "semester": "Elective"
+                  },
+                  {
+                    "name": "Security in Software Engineering",
+                    "code": "SEN406",
+                    "prerequisites": ["SEN202"],
+                    "type": "elective",
+                    "level": "Fourth Level",
+                    "semester": "Elective"
+                  },
+                  {
+                    "name": "Game Programming",
+                    "code": "SEN407",
+                    "prerequisites": ["CSC201"],
+                    "type": "elective",
+                    "level": "Fourth Level",
+                    "semester": "Elective"
+                  },
+                  {
+                    "name": "Software maintenance and evolution",
+                    "code": "SEN408",
+                    "prerequisites": ["CSC309"],
+                    "type": "elective",
+                    "level": "Fourth Level",
+                    "semester": "Elective"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      
