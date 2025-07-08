@@ -84,7 +84,20 @@ function processStudentDataDetailed(studentResponse, curriculum, branch) {
   for (const course of (studentResponse.studentProgress || [])) {
     let code = (course.crscode || '|').split('|')[0];
     if (branch === 'Software Engineering') code = code.replace(/-/g, '');
-    const courseInfo = curriculum[code];
+    let courseInfo = curriculum[code];
+    // Fallback for UNI- courses not in curriculum
+    if (!courseInfo && code.startsWith('UNI-')) {
+      let hours = 0;
+      if (course.crsHours && !isNaN(parseFloat(course.crsHours))) {
+        hours = parseFloat(course.crsHours);
+      } else if (course.creditv && !isNaN(parseFloat(course.creditv))) {
+        hours = parseFloat(course.creditv);
+      }
+      courseInfo = {
+        name: course.crsName || code,
+        credit_hours: hours,
+      };
+    }
     if (!courseInfo) continue;
     const degreeStr = course.Degree;
     let isUni = code.startsWith('UNI-');
@@ -92,7 +105,8 @@ function processStudentDataDetailed(studentResponse, curriculum, branch) {
     let points = 0;
     if (isUni) {
       // UNI- courses: Pass/Fail only, not included in GPA
-      if (typeof course.gradeN === 'string' && course.gradeN.trim().toUpperCase() === 'P') {
+      let gradeN = (course.gradeN || '').split('|').map(s => s.trim().toUpperCase());
+      if (gradeN.includes('P')) {
         letter = 'P';
       } else {
         letter = 'F';
@@ -105,9 +119,22 @@ function processStudentDataDetailed(studentResponse, curriculum, branch) {
     }
     let semesterId = course.yearsem || 'Unknown';
     let semesterName = course.semesterCourse ? course.semesterCourse.split('|')[1] : 'Unknown';
+    // Add academic year to semester name if yearsem is available
+    let yearStr = '';
+    if (semesterId && semesterId !== 'Unknown' && String(semesterId).length === 3 && !isNaN(Number(semesterId))) {
+      let decade = parseInt(String(semesterId)[0]);
+      let yearInDecade = parseInt(String(semesterId).slice(1));
+      if (!isNaN(decade) && !isNaN(yearInDecade)) {
+        let startYear = 2000 + (decade * 10) + (yearInDecade - 1);
+        let endYear = startYear + 1;
+        yearStr = `${startYear}/${endYear}`;
+      }
+    }
+    let displaySemName = semesterName;
+    if (yearStr) displaySemName = `${semesterName} ${yearStr}`;
     if (!semesters[semesterId]) {
       semesters[semesterId] = {
-        name: semesterName,
+        name: displaySemName,
         courses: [],
         totalPoints: 0,
         totalHours: 0
