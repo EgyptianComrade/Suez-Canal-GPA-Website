@@ -74,8 +74,9 @@ function flattenSEcurriculum(jsonData) {
   return flat;
 }
 
-function processStudentData(studentResponse, curriculum, branch) {
-  // Only a simple GPA calculation for now
+// Enhanced: Process student data and organize by semester
+function processStudentDataDetailed(studentResponse, curriculum, branch) {
+  const semesters = {};
   const allAttempts = {};
   let totalPoints = 0, totalHours = 0;
   let passedCourses = new Set();
@@ -87,22 +88,60 @@ function processStudentData(studentResponse, curriculum, branch) {
     if (!courseInfo) continue;
     const degreeStr = course.Degree;
     let gradeInfo = branch === 'Software Engineering' ? getGradeInfoSoftwareEng(degreeStr) : getGradeInfo(degreeStr);
-    if (gradeInfo.points > 0) passedCourses.add(code);
+    let semesterId = course.yearsem || 'Unknown';
+    let semesterName = course.semesterCourse ? course.semesterCourse.split('|')[1] : 'Unknown';
+    if (!semesters[semesterId]) {
+      semesters[semesterId] = {
+        name: semesterName,
+        courses: [],
+        totalPoints: 0,
+        totalHours: 0
+      };
+    }
+    const courseObj = {
+      name: courseInfo.name,
+      code: code,
+      hours: courseInfo.credit_hours,
+      degree: degreeStr,
+      letter: gradeInfo.letter,
+      points: gradeInfo.points
+    };
+    semesters[semesterId].courses.push(courseObj);
     if (typeof degreeStr === 'string' && degreeStr.trim() !== '' && gradeInfo.letter !== 'N/A') {
+      semesters[semesterId].totalPoints += gradeInfo.points * courseInfo.credit_hours;
+      semesters[semesterId].totalHours += courseInfo.credit_hours;
       totalPoints += gradeInfo.points * courseInfo.credit_hours;
       totalHours += courseInfo.credit_hours;
     }
+    if (gradeInfo.points > 0) passedCourses.add(code);
   }
+  // Sort semesters by key
+  const sortedSemesters = Object.entries(semesters).sort((a, b) => a[0].localeCompare(b[0]));
   return {
+    semesters: sortedSemesters,
     gpa: totalHours > 0 ? (totalPoints / totalHours) : 0,
     completedHours: Array.from(passedCourses).reduce((sum, code) => sum + (curriculum[code]?.credit_hours || 0), 0),
     totalHours: Object.values(curriculum).reduce((sum, c) => sum + (c.credit_hours || 0), 0),
   };
 }
 
+function renderSemesterTable(semester) {
+  let html = `<h3>${semester.name}</h3>`;
+  html += `<table class="gpa-table"><thead><tr><th>Course Name</th><th>Code</th><th>Credit Hours</th><th>Degree</th><th>Letter Grade</th></tr></thead><tbody>`;
+  for (const c of semester.courses) {
+    html += `<tr><td>${c.name}</td><td>${c.code}</td><td>${c.hours}</td><td>${c.degree}</td><td>${c.letter}</td></tr>`;
+  }
+  html += `</tbody></table>`;
+  if (semester.totalHours > 0) {
+    html += `<p><strong>Semester GPA:</strong> ${(semester.totalPoints/semester.totalHours).toFixed(2)}</p>`;
+  }
+  return html;
+}
+
 // --- UI Integration ---
 document.addEventListener('DOMContentLoaded', () => {
   let curriculums = null;
+  let lastResult = null;
 
   fetch('Curriculums.json')
     .then(res => res.json())
@@ -110,6 +149,14 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(err => {
       document.getElementById('results').innerHTML = '<span style="color:red">Failed to load curriculums.json</span>';
     });
+
+  // Add semester selector
+  const semesterSelector = document.createElement('select');
+  semesterSelector.id = 'semester-select';
+  semesterSelector.style.display = 'none';
+  semesterSelector.innerHTML = '<option value="all">All Semesters</option>';
+  document.getElementById('gpa-form').appendChild(document.createElement('br'));
+  document.getElementById('gpa-form').appendChild(semesterSelector);
 
   document.getElementById('gpa-form').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -133,11 +180,33 @@ document.addEventListener('DOMContentLoaded', () => {
       flatSE = flattenSEcurriculum(curriculums.SoftwareEngineering.curriculum);
       curriculum = flatSE;
     }
-    const result = processStudentData(studentData, curriculum, branch);
-    document.getElementById('results').innerHTML = `
-      <h2>Results</h2>
-      <p><strong>Cumulative GPA:</strong> ${result.gpa.toFixed(2)}</p>
-      <p><strong>Completed Credit Hours:</strong> ${result.completedHours} / ${result.totalHours}</p>
-    `;
+    lastResult = processStudentDataDetailed(studentData, curriculum, branch);
+    // Populate semester selector
+    semesterSelector.innerHTML = '<option value="all">All Semesters</option>';
+    for (const [semId, sem] of lastResult.semesters) {
+      semesterSelector.innerHTML += `<option value="${semId}">${sem.name}</option>`;
+    }
+    semesterSelector.style.display = '';
+    renderResults('all');
   });
+
+  semesterSelector.addEventListener('change', function() {
+    renderResults(this.value);
+  });
+
+  function renderResults(selectedSemester) {
+    if (!lastResult) return;
+    let html = `<h2>Results</h2>`;
+    html += `<p><strong>Cumulative GPA:</strong> ${lastResult.gpa.toFixed(2)}</p>`;
+    html += `<p><strong>Completed Credit Hours:</strong> ${lastResult.completedHours} / ${lastResult.totalHours}</p>`;
+    if (selectedSemester === 'all') {
+      for (const [semId, sem] of lastResult.semesters) {
+        html += renderSemesterTable(sem);
+      }
+    } else {
+      const sem = lastResult.semesters.find(([id, _]) => id === selectedSemester);
+      if (sem) html += renderSemesterTable(sem[1]);
+    }
+    document.getElementById('results').innerHTML = html;
+  }
 }); 
