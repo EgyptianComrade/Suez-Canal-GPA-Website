@@ -87,7 +87,22 @@ function processStudentDataDetailed(studentResponse, curriculum, branch) {
     const courseInfo = curriculum[code];
     if (!courseInfo) continue;
     const degreeStr = course.Degree;
-    let gradeInfo = branch === 'Software Engineering' ? getGradeInfoSoftwareEng(degreeStr) : getGradeInfo(degreeStr);
+    let isUni = code.startsWith('UNI-');
+    let letter = '';
+    let points = 0;
+    if (isUni) {
+      // UNI- courses: Pass/Fail only, not included in GPA
+      if (typeof course.gradeN === 'string' && course.gradeN.trim().toUpperCase() === 'P') {
+        letter = 'P';
+      } else {
+        letter = 'F';
+      }
+      points = 0;
+    } else {
+      let gradeInfo = branch === 'Software Engineering' ? getGradeInfoSoftwareEng(degreeStr) : getGradeInfo(degreeStr);
+      letter = gradeInfo.letter;
+      points = gradeInfo.points;
+    }
     let semesterId = course.yearsem || 'Unknown';
     let semesterName = course.semesterCourse ? course.semesterCourse.split('|')[1] : 'Unknown';
     if (!semesters[semesterId]) {
@@ -103,17 +118,18 @@ function processStudentDataDetailed(studentResponse, curriculum, branch) {
       code: code,
       hours: courseInfo.credit_hours,
       degree: degreeStr,
-      letter: gradeInfo.letter,
-      points: gradeInfo.points
+      letter: letter,
+      points: points
     };
     semesters[semesterId].courses.push(courseObj);
-    if (typeof degreeStr === 'string' && degreeStr.trim() !== '' && gradeInfo.letter !== 'N/A') {
-      semesters[semesterId].totalPoints += gradeInfo.points * courseInfo.credit_hours;
+    // Only include non-UNI courses in GPA calculation
+    if (!isUni && typeof degreeStr === 'string' && degreeStr.trim() !== '' && letter !== 'N/A') {
+      semesters[semesterId].totalPoints += points * courseInfo.credit_hours;
       semesters[semesterId].totalHours += courseInfo.credit_hours;
-      totalPoints += gradeInfo.points * courseInfo.credit_hours;
+      totalPoints += points * courseInfo.credit_hours;
       totalHours += courseInfo.credit_hours;
     }
-    if (gradeInfo.points > 0) passedCourses.add(code);
+    if (!isUni && points > 0) passedCourses.add(code);
   }
   // Sort semesters by key
   const sortedSemesters = Object.entries(semesters).sort((a, b) => a[0].localeCompare(b[0]));
